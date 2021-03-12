@@ -33,6 +33,14 @@ def get_specific_artist(stage_name='', full_name='', korean_name='', korean_stag
                 isIn = False
                 break
         if isIn:
+            artist['Stage_Name'] = artist.pop('Stage Name')
+            artist['Full_Name'] = artist.pop('Full Name')
+            artist['Korean_Name'] = artist.pop('Korean Name')
+            artist['Korean_Stage_Name'] = artist.pop('Korean Stage Name')
+            artist['Date_of_Birth'] = artist.pop('Date of Birth')
+            artist['Second_Country'] = artist.pop('Second Country')
+            artist['Other_Group'] = artist.pop('Other Group')
+            artist['Former_Group'] = artist.pop('Former Group')
             artists.append(artist)
     return artists
         
@@ -44,6 +52,9 @@ def get_similar_artist(stage_name='', full_name='', korean_name='', korean_stage
                     position, instagram, twitter]
     artists = []
     for artist in all_artist:
+        
+        
+        
         artist_attributes = [artist['Stage Name'], artist['Full Name'], artist['Korean Name'],
                             artist['Korean Stage Name'], artist['Date of Birth'], artist['Group'],
                             artist['Country'], artist['Second Country'], artist['Height'],
@@ -57,6 +68,14 @@ def get_similar_artist(stage_name='', full_name='', korean_name='', korean_stage
                 isIn = False
                 break
         if isIn:
+            artist['Stage_Name'] = artist.pop('Stage Name')
+            artist['Full_Name'] = artist.pop('Full Name')
+            artist['Korean_Name'] = artist.pop('Korean Name')
+            artist['Korean_Stage_Name'] = artist.pop('Korean Stage Name')
+            artist['Date_of_Birth'] = artist.pop('Date of Birth')
+            artist['Second_Country'] = artist.pop('Second Country')
+            artist['Other_Group'] = artist.pop('Other Group')
+            artist['Former_Group'] = artist.pop('Former Group')
             artists.append(artist)
     return artists
 
